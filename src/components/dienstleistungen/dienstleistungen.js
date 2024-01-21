@@ -87,20 +87,20 @@ const Dienstleistungen = () => {
               <div className="flex items-center justify-between py-4">
                 <div className="flex flex-col items-center justify-center">
                   <div
-                    className="mb-4 aspect-square h-[60px] rounded-[50%] bg-emilia"
+                    className="bg-yasemin mb-4 aspect-square h-[60px] rounded-[50%]"
                     style={{
-                      backgroundSize: "275%",
-                      backgroundPosition: "42% 18%",
+                      backgroundSize: "115%",
+                      backgroundPosition: "42% 10%",
                     }}
                   ></div>
                   <p>Yasemin Alimanovic</p>
                 </div>
                 <div className="flex flex-col items-center justify-center">
                   <div
-                    className="mb-4 aspect-square h-[60px] rounded-[50%] bg-robert"
+                    className="bg-sevil mb-4 aspect-square h-[60px] rounded-[50%]"
                     style={{
-                      backgroundSize: "675%",
-                      backgroundPosition: "47% 24%",
+                      backgroundSize: "115%",
+                      backgroundPosition: "47% 6%",
                     }}
                   ></div>
                   <p>Sevil Alimanovic</p>
@@ -127,10 +127,10 @@ const Dienstleistungen = () => {
               <div className="flex items-center justify-center py-4">
                 <div className="flex flex-col items-center justify-center">
                   <div
-                    className="mb-4 aspect-square h-[60px] rounded-[50%] bg-emilia"
+                    className="bg-diana mb-4 aspect-square h-[60px] rounded-[50%]"
                     style={{
-                      backgroundSize: "275%",
-                      backgroundPosition: "42% 18%",
+                      backgroundSize: "115%",
+                      backgroundPosition: "48% 48%",
                     }}
                   ></div>
                   <p>Diana Vartanian</p>

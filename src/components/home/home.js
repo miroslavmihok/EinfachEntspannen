@@ -1,5 +1,3 @@
-import Header from "../header/header";
-
 const Home = () => {
   return (
     <div className="bg-fit h-screen w-full max-w-full bg-home bg-cover bg-center">
