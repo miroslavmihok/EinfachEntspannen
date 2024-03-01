@@ -1,12 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Logo from "../../assets/logo.png";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    if (menuRef.current) {
+      gsap.to(menuRef.current, {
+        scrollTrigger: {
+          trigger: menuRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+        x: () => (isOpen ? "0%" : "-100%"),
+      });
+    }
+  }, [isOpen]);
+
+  const scrollToSection = (sectionId) => {
+    const offset = document.querySelector(".fixed-header").offsetHeight || 0;
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: sectionId, offsetY: offset },
+    });
+    setIsOpen(false);
+  };
 
   return (
     <div>
-      <div className="fixed top-0 flex w-full items-center justify-between bg-white p-2">
+      <div className="fixed-header sticky top-0 z-40 flex w-full items-center justify-between bg-white p-2">
         <div className="w-[30px]"></div>
         <div>
           <img src={Logo} alt="logo" height="60px" width="60px" />
@@ -18,7 +47,7 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`absolute flex h-screen w-full flex-col bg-white p-4 transition-all ${
+        className={`fixed z-50 flex h-screen w-full flex-col bg-white p-4 transition-all ${
           isOpen ? "left-0" : "left-[-100%]"
         }`}
       >
@@ -28,26 +57,30 @@ const Header = () => {
           </button>
         </div>
         <ul
-          className="flex flex-grow flex-col justify-center gap-6"
+          className="flex flex-grow flex-col justify-center gap-6 text-center text-2xl"
           style={{ flex: "1" }}
         >
           <li>
-            <a href="#">HOME</a>
+            <button onClick={() => scrollToSection("#home")}>HOME</button>
           </li>
           <li>
-            <a href="#">DIENSTLEISTUNGEN</a>
+            <button onClick={() => scrollToSection("#dienstleistungen")}>
+              DIENSTLEISTUNGEN
+            </button>
           </li>
           <li>
-            <a href="#">REFERENZEN</a>
+            <button onClick={() => scrollToSection("#referenzen")}>
+              REFERENZEN
+            </button>
           </li>
           <li>
-            <a href="#">MARKEN</a>
+            <button onClick={() => scrollToSection("#marken")}>MARKEN</button>
           </li>
           <li>
-            <a href="#">SOCIAL</a>
+            <button onClick={() => scrollToSection("#social")}>SOCIAL</button>
           </li>
           <li>
-            <a href="#">KONTAKT</a>
+            <button onClick={() => scrollToSection("#kontakt")}>KONTAKT</button>
           </li>
         </ul>
       </div>

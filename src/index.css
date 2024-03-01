@@ -27,3 +27,85 @@ code {
 .font-cormorant-garamond {
   font-family: "Cormorant Garamond", serif;
 }
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+.hoverCardBg:hover {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}

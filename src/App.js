@@ -1,25 +1,24 @@
-import Home from "../src/components/home/home";
-import Dienstleistungen from "../src/components/dienstleistungen/dienstleistungen";
-import Referenzen from "../src/components/referenzen/referenzen";
-import Marken from "./components/marken/marken";
-import Kontakt from "./components/kontakt/kontakt";
-import Social from "./components/social/social";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
-import "./App.css";
+import Home from "./pages/Homepage";
+import Imprint from "./pages/Imprint";
+import Datenschutz from "./pages/Datenschutz";
 
 function App() {
   return (
-    <div className="h-full w-full overflow-x-hidden">
-      <Header />
-      <Home />
-      <Dienstleistungen />
-      <Referenzen />
-      <Marken />
-      <Social />
-      <Kontakt />
-      <Footer />
-    </div>
+    <Router>
+      <div className="h-full w-full overflow-x-hidden">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/imprint" element={<Imprint />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
