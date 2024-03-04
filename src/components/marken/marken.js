@@ -4,16 +4,16 @@ const Marken = () => {
       className="flex w-full items-center justify-center px-4 py-4 md:px-12 md:py-12 2xl:px-0"
       id="marken"
     >
-      <div className="3xl:w-[1580px] w-full 2xl:w-[1200px]">
+      <div className="w-full 2xl:w-[1200px] 3xl:w-[1580px]">
         <h1 className="mb-4 text-center font-['Roboto'] text-2xl font-extralight md:text-3xl">
           WIR BENUTZEN...
         </h1>
         <div className="flex flex-col items-center justify-center">
-          <section className="grid w-full grid-cols-1 gap-1 md:grid-cols-2 md:gap-4 xl:grid-cols-4">
+          <section className="grid-marken_container grid w-full gap-1 md:gap-4">
             <div className="flex h-full w-full items-center justify-center">
               <div className="hover:details-block group relative h-full w-full md:max-w-[350px]">
                 <div className="aspect-video w-full bg-jsb bg-cover bg-center md:aspect-square"></div>
-                <div className="details absolute top-0 hidden h-full w-full flex-col justify-center text-center group-hover:flex group-hover:bg-white/75">
+                <div className="details absolute top-0 hidden h-full w-full flex-col justify-center p-2 text-center group-hover:flex group-hover:bg-white/75">
                   <h1 className="font-bold">JET SET Beauty</h1>
                   <p>
                     Jet Set Beauty steht für qualitativ hochwertige Produkte für
@@ -25,7 +25,7 @@ const Marken = () => {
             <div className="flex h-full w-full items-center justify-center">
               <div className="hover:details-block group relative h-full w-full md:max-w-[350px]">
                 <div className="aspect-video w-full bg-doterra bg-cover bg-center md:aspect-square"></div>
-                <div className="details absolute top-0 hidden h-full w-full flex-col justify-center text-center group-hover:flex group-hover:bg-white/75">
+                <div className="details absolute top-0 hidden h-full w-full flex-col justify-center p-2 text-center group-hover:flex group-hover:bg-white/75">
                   <h1 className="font-bold">DÖTERRA</h1>
                   <p>
                     Die ätherische Ölmischung AromaTouch kombiniert eine
@@ -38,7 +38,7 @@ const Marken = () => {
             <div className="flex h-full w-full items-center justify-center">
               <div className="hover:details-block group relative h-full w-full md:max-w-[350px]">
                 <div className="aspect-video w-full bg-pino bg-cover bg-center md:aspect-square"></div>
-                <div className="details absolute top-0 hidden h-full w-full flex-col justify-center text-center group-hover:flex group-hover:bg-white/75">
+                <div className="details absolute top-0 hidden h-full w-full flex-col justify-center p-2 text-center group-hover:flex group-hover:bg-white/75">
                   <h1 className="font-bold">PINO</h1>
                   <p>
                     Bei unseren Massagen verwenden wir verschiedene
@@ -51,7 +51,7 @@ const Marken = () => {
             <div className="flex h-full w-full items-center justify-center">
               <div className="hover:details-block group relative h-full w-full md:max-w-[350px]">
                 <div className="aspect-video w-full bg-pedibaehr bg-cover bg-center md:aspect-square"></div>
-                <div className="details absolute top-0 hidden h-full w-full flex-col justify-center text-center group-hover:flex group-hover:bg-white/75">
+                <div className="details absolute top-0 hidden h-full w-full flex-col justify-center p-2 text-center group-hover:flex group-hover:bg-white/75">
                   <h1 className="font-bold">PEDIBAEHR</h1>
                   <p>
                     Bei unserer Fußpflege verwenden wir Rosencreme von Pedibaehr

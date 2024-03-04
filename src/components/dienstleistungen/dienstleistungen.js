@@ -12,7 +12,7 @@ const data = [
       { name: "Emilia Schweiger", img: "bg-emilia" },
       { name: "Robert Schweiger", img: "bg-robert" },
     ],
-    phone: "+43 XXX XXX XXXX",
+    phone: "+43 660 380 7873",
   },
   {
     title: "Friseur",
@@ -21,7 +21,7 @@ const data = [
     description:
       "Unsere erfahrene Friseurin kreiert individuelle Stylings, die Ihre Persönlichkeit unterstreichen. Vom neuesten Haartrend bis zur klassischen Eleganz bieten wir professionelle Schnitte, Farben und Beratung für Ihr perfektes Hairstyling.",
     dienstleister: [{ name: "Yvonne Kral", img: "bg-yvonne" }],
-    phone: "+43 XXX XXX XXXX",
+    phone: "+43 676 566 5848",
   },
   {
     title: "Pimp YOUR Style",
@@ -33,7 +33,7 @@ const data = [
       { name: "Sevil Alimanovic", img: "bg-sevil" },
       { name: "Yasemin Alimanovic", img: "bg-yasemin" },
     ],
-    phone: "+43 XXX XXX XXXX",
+    phone: "+43 680 200 8258",
   },
   {
     title: "Fußpflege",
@@ -42,7 +42,7 @@ const data = [
     description:
       "Verwöhnen Sie Ihre Füße mit unserer ganzheitlichen Pflege. Unsere Experten revitalisieren nicht nur Ihre Füße, sondern schaffen auch Entspannung und Wohlbefinden für einen selbstbewussten Auftritt.",
     dienstleister: [{ name: "Diana Vartanian", img: "bg-diana" }],
-    phone: "+43 XXX XXX XXXX",
+    phone: "+43 676 750 2672",
   },
 ];
 
@@ -52,7 +52,7 @@ const Dienstleistungen = () => {
       className="flex h-fit w-screen max-w-full items-center justify-center bg-white"
       id="dienstleistungen"
     >
-      <div className="3xl:w-[1580px] xl:px-0 2xl:w-[1200px]">
+      <div className="xl:px-0 2xl:w-[1200px] 3xl:w-[1580px]">
         <div className="flex h-full w-full flex-col items-center justify-center px-4 py-4 md:px-12 md:py-12 2xl:px-0">
           <div className="flex h-full w-full flex-col items-center justify-center xl:flex-row">
             {/* MASSAGE bis FUßPFLEGE */}
@@ -90,7 +90,7 @@ const Dienstleistungen = () => {
                     </strong>
                   </p>
                 </div>
-                <p>+43 XXX XXX XXXX</p>
+                <p>+43 660 380 7873</p>
               </div>
             </div>
           </div>

@@ -1,6 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const quotes = [
+  {
+    name: "Hannes Potje",
+    quote:
+      "Emilias Massage ist eine TOP-Adresse. Schon beim Betreten des Studios fühlt man sich rundum wohl. Alles ist sehr warm eingerichtet, sehr sauber und mit Liebe zum Detail. Ich bin seit Jahren wegen Verspannungen im Rücken/ Nackenbereich regelmäßig in Behandlung bei ihr und es ist jedesmahl eine Wohltat. Meine starken Verspannungen lösen sich und der ganze Körper fühlt sich entspannt an. Emilia lässt sich sehr auf die Bedürfnisse ein und findet immer wieder neue Methoden, um die Schmerzen zu minimieren. Ich würde sie jederzeit weiterempfehlen; v.a. auch wenn man eine kraftvollere Massage bevorzugt. Jederzeit immer gerne wieder!",
+  },
   {
     name: "Verena Lippi",
     quote:
@@ -22,10 +27,12 @@ const Referenzen = () => {
   const [position, setPosition] = useState(0);
   const [count, setCount] = useState(0);
 
+  const endOfQuotes = Math.max(0, quotes.length - 1) * 100;
+
   const previousHandler = () => {
     setCount((prevCount) => (prevCount - 1 + quotes.length) % quotes.length);
     if (position === 0) {
-      setPosition(-200);
+      setPosition(-endOfQuotes);
     } else {
       setPosition((prevPosition) => prevPosition + 100);
     }
@@ -33,7 +40,7 @@ const Referenzen = () => {
 
   const nextHandler = () => {
     setCount((prevCount) => (prevCount + 1) % quotes.length);
-    if (position === -200) {
+    if (position === -endOfQuotes) {
       setPosition(0);
     } else {
       setPosition((prevPosition) => prevPosition - 100);

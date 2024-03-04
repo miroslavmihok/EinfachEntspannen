@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import Social from "./social";
 
 const InstaFeed = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [feed, setFeed] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
+      const token = process.env.REACT_APP_INSTAGRAM_KEY;
+      setIsLoading(true);
       try {
-        const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,timestamp,children{media_url}&access_token=IGQWRPcU16UEpyMDNKUUhDeEcxcXVVRVljb3k0XzdKZAHlWSnNGTUtOMm93UGpidmIwZAEgtT1BiMlE5UWNGZAE1aaThPSUY2eEh5Y1MySnVLUzZAuZAEZAUQXVBWlpwNmZAKeDRNcmk2RWZArb3A1UDFpaEFtX0Q5eDl1c0kZD`;
+        const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,timestamp,children{media_url}&access_token=${token}`;
         const response = await fetch(url);
         const data = await response.json();
 
@@ -16,8 +20,13 @@ const InstaFeed = () => {
         );
 
         setFeed(filteredData);
+        console.log(filteredData);
+        setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching Instagram feed:", error);
+        setError("Error fetching Instagram feed:", error);
+        setIsLoading(false);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -26,7 +35,7 @@ const InstaFeed = () => {
 
   return (
     <>
-      <Social data={feed} />
+      <Social data={feed} isLoading={isLoading} error={error} />
     </>
   );
 };

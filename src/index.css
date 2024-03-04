@@ -5,7 +5,7 @@
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -61,8 +61,12 @@ h5 {
 
 p {
   font-size: 16px;
-  font-weight: 500;
   line-height: normal;
+}
+
+.grid-marken_container {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  place-content: center;
 }
 
 @media (min-width: 640px) {
@@ -86,6 +90,9 @@ p {
   h2 {
     font-size: 32px;
   }
+  .grid-marken_container {
+    grid-template-columns: repeat(2, minmax(0, 350px));
+  }
 }
 @media (min-width: 1280px) {
   h1 {
@@ -103,9 +110,16 @@ p {
   p {
     font-size: 18px;
   }
+  .grid-marken_container {
+    grid-template-columns: repeat(4, minmax(0, 350px));
+  }
 }
 
 .hoverCardBg:hover {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+
+.no-scroll {
+  overflow: hidden;
 }

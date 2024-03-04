@@ -9,7 +9,8 @@ import Datenschutz from "./pages/Datenschutz";
 function App() {
   return (
     <Router>
-      <div className="h-full w-full overflow-x-hidden">
+      <div className="h-full w-full">
+        {/* overflow-x-hidden */}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
