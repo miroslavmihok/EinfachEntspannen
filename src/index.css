@@ -1,13 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  max-width: 100%;
+  /* overflow-x: hidden; */
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100vw;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.font-cormorant-garamond {
+  font-family: "Cormorant Garamond", serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+p {
+  font-size: 16px;
+  line-height: normal;
+}
+
+.grid-marken_container {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  place-content: center;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .grid-marken_container {
+    grid-template-columns: repeat(2, minmax(0, 350px));
+  }
+}
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .grid-marken_container {
+    grid-template-columns: repeat(4, minmax(0, 350px));
+  }
+}
+
+.hoverCardBg:hover {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
