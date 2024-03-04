@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3896b1c3.css",
+    "main.js": "/static/js/main.716b5506.js",
+    "static/js/787.4062624b.chunk.js": "/static/js/787.4062624b.chunk.js",
+    "static/media/home.jpg": "/static/media/home.f9404742292781d548ea.jpg",
+    "static/media/geschäft.png": "/static/media/geschäft.bd622da59953d01596ed.png",
+    "static/media/emilia.png": "/static/media/emilia.1d41eb41306a726cecc6.png",
+    "static/media/sevil.png": "/static/media/sevil.e5e3236fdd2075541716.png",
+    "static/media/yvonne.png": "/static/media/yvonne.25bbae5d00dfed3bbd1a.png",
+    "static/media/yasemin.png": "/static/media/yasemin.23d03487ebfa205888b6.png",
+    "static/media/doterra2.jpg": "/static/media/doterra2.db61243b8915e61def90.jpg",
+    "static/media/robert.png": "/static/media/robert.51d6f39c651b796e0864.png",
+    "static/media/diana.png": "/static/media/diana.ed7b9c303972ecd88e7d.png",
+    "static/media/massage.jpg": "/static/media/massage.c3fb8e1908ab078ba9e8.jpg",
+    "static/media/nagel.jpg": "/static/media/nagel.cef60ecae1a8d759f6c3.jpg",
+    "static/media/pedibaehr.jpeg": "/static/media/pedibaehr.554a8a5c1f82656586ca.jpeg",
+    "static/media/logo.png": "/static/media/logo.9a76c8e8acffec8fd4da.png",
+    "static/media/jsb.jpeg": "/static/media/jsb.98e21055902aee889da6.jpeg",
+    "static/media/solarium.jpg": "/static/media/solarium.acbf5e0f3b2d14c2ae4a.jpg",
+    "static/media/friseur.jpeg": "/static/media/friseur.36add7a04b2531556239.jpeg",
+    "static/media/fußpflege.jpg": "/static/media/fußpflege.92d0d8c352e2db153fd0.jpg",
+    "static/media/pino.png": "/static/media/pino.5c3b6e705b5f1dd1d902.png",
+    "index.html": "/index.html",
+    "main.3896b1c3.css.map": "/static/css/main.3896b1c3.css.map",
+    "main.716b5506.js.map": "/static/js/main.716b5506.js.map",
+    "787.4062624b.chunk.js.map": "/static/js/787.4062624b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3896b1c3.css",
+    "static/js/main.716b5506.js"
+  ]
+}
