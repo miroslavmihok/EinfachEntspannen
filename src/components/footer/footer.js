@@ -17,8 +17,8 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col  items-center justify-center bg-[#F5EBE0] p-4">
-      <div className="z-40 w-[75%]">
-        <div className="grid grid-cols-1 items-start justify-center md:grid-cols-2">
+      <section className="z-40 w-[75%]">
+        <nav className="grid grid-cols-1 items-start justify-center md:grid-cols-2">
           <ul className="mb-4 flex flex-col flex-wrap items-center justify-center gap-2">
             <li>
               <Link to="/" onClick={() => scrollToSection("#home")}>
@@ -26,20 +26,24 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <button onClick={() => scrollToSection("#dienstleistungen")}>
+              <Link to="/" onClick={() => scrollToSection("#dienstleistungen")}>
                 Dienstleistungen
-              </button>
+              </Link>
             </li>
             <li>
-              <button onClick={() => scrollToSection("#referenzen")}>
+              <Link to="/" onClick={() => scrollToSection("#referenzen")}>
                 Referenzen
-              </button>
+              </Link>
             </li>
             <li>
-              <button onClick={() => scrollToSection("#marken")}>Marken</button>
+              <Link to="/" onClick={() => scrollToSection("#marken")}>
+                Marken
+              </Link>
             </li>
             <li>
-              <button onClick={() => scrollToSection("#social")}>Social</button>
+              <Link to="/" onClick={() => scrollToSection("#social")}>
+                Social
+              </Link>
             </li>
           </ul>
           <ul className="mb-4 flex flex-col flex-wrap items-center justify-center gap-2">
@@ -50,7 +54,7 @@ const Footer = () => {
               <Link to="/datenschutz">Datenschutzerklärung</Link>
             </li>
           </ul>
-        </div>
+        </nav>
         <hr
           style={{
             color: "#000000",
@@ -64,10 +68,16 @@ const Footer = () => {
           <p>Copyright © 2023 KÖRPER, GEIST & SEELE All Rights Reserved.</p>
           <p>
             Site Design by{" "}
-            <a href="https://miroslavmihok.com/">Miroslav Mihok</a>
+            <a
+              href="https://miroslavmihok.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Miroslav Mihok
+            </a>
           </p>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

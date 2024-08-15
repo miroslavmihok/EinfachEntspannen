@@ -1,9 +1,6 @@
-import { APIProvider, AdvancedMarker, Map } from "@vis.gl/react-google-maps";
 const Kontakt = () => {
-  const position = { lat: 48.13242, lng: 16.904 };
-
   return (
-    <div
+    <section
       className="flex flex-col  items-center justify-center px-4 py-4 text-center md:px-12 md:py-12 2xl:px-0"
       id="kontakt"
     >
@@ -26,21 +23,20 @@ const Kontakt = () => {
               </p>
             </div>
           </div>
-          <div className="aspect-video w-full">
-            <APIProvider apiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
-              <Map
-                center={position}
-                zoom={18}
-                mapId={process.env.REACT_APP_GOOGLE_MAP_ID}
-                style={{ border: 0 }}
-              >
-                <AdvancedMarker position={position} />
-              </Map>
-            </APIProvider>
+          <div className="w-full">
+            <iframe
+              title="standort"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1882.9220723248372!2d16.902226413425527!3d48.1323402127614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476cf5a21e4486f1%3A0xebdefa78e46cb979!2sWienerstra%C3%9Fe%2017%2C%202405%20Bad%20Deutsch-Altenburg!5e0!3m2!1sen!2sat!4v1723721300098!5m2!1sen!2sat"
+              width="600"
+              height="450"
+              style={{ border: 0, width: "100%" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
