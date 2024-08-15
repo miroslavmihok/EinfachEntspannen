@@ -40,11 +40,12 @@ const Social = ({ data, isLoading, error }) => {
                   href={item.media_url}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={`instagram content with id ${item.id}`}
                   key={item.id}
                 >
                   <img
                     src={item.media_url}
-                    alt={item.caption}
+                    alt={`instagram content with id ${item.id}`}
                     className="aspect-square w-full object-cover md:max-w-[350px]"
                   />
                 </a>
@@ -55,6 +56,7 @@ const Social = ({ data, isLoading, error }) => {
               {displayedImages < data.length && displayedImages > 4 && (
                 <button
                   onClick={loadLessImages}
+                  title="show less images btn"
                   className="md:text-md mt-4 min-w-[140px] rounded-md border-2 border-white px-3 py-2 font-['Roboto'] text-sm font-medium text-black hover:bg-white md:min-w-[155px]"
                 >
                   Weniger anzeigen
@@ -62,6 +64,7 @@ const Social = ({ data, isLoading, error }) => {
               )}
               <button
                 onClick={loadMoreImages}
+                title="show more images btn"
                 className="md:text-md mt-4 min-w-[140px] rounded-md border-2 border-white px-3 py-2 font-['Roboto'] text-sm font-medium text-black hover:bg-white md:min-w-[155px]"
               >
                 Mehr anzeigen
@@ -73,6 +76,7 @@ const Social = ({ data, isLoading, error }) => {
               displayedImages > data.length) && (
               <button
                 onClick={loadInitial}
+                title="show default number of images btn"
                 className="md:text-md mt-4 min-w-[140px] rounded-md border-2 border-white bg-white p-2 font-['Roboto'] text-sm font-medium text-black hover:bg-white md:min-w-[155px]"
               >
                 Weniger anzeigen
